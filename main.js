@@ -1,5 +1,22 @@
 $(document).ready(function() {
 
+    var genre = $("select");
+
+	genre.change(function (){
+	    var myGenre = $(this).val();
+
+		$(".cd").each(function(){
+            if (myGenre == 'All'){
+                $(".cd").show();
+                return
+            }else if ($(this).hasClass(myGenre)){
+				$(this).show();
+			} else {
+				$(this).hide();
+			}
+		});
+	});
+
 
 
     $.ajax({
@@ -17,6 +34,23 @@ $(document).ready(function() {
                 $('.cds-container').append(html);
                 // console.log(dischi[i].genre);
             }
+
+            // $('select.genre').change(function(){
+            //     // $('.cd').hide();
+            //     var genre = $(this).val();
+            //     console.log(genre);
+            //
+            //     var select = $('.cd').hasClass(genre);
+            //     console.log(select);
+            //
+            //
+            // });
+
+
+
+
+
+
 
 
         },
