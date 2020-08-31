@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var genre = $("select");
+    var genre = $('select');
 
 	genre.change(function (){
 	    var myGenre = $(this).val();
@@ -34,25 +34,6 @@ $(document).ready(function() {
                 $('.cds-container').append(html);
                 // console.log(dischi[i].genre);
             }
-
-            // $('select.genre').change(function(){
-            //     // $('.cd').hide();
-            //     var genre = $(this).val();
-            //     console.log(genre);
-            //
-            //     var select = $('.cd').hasClass(genre);
-            //     console.log(select);
-            //
-            //
-            // });
-
-
-
-
-
-
-
-
         },
         'error': function() {
         alert('Error');
